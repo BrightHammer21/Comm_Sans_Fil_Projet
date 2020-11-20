@@ -27,7 +27,7 @@ HEADERS += \
 FORMS += \
     widget.ui
 
-LIBS += -L..\\Comm_Sans_Fil_Projet\\projetQt -lODALID
+LIBS += -L -lODALID
 
 
 # Default rules for deployment.
