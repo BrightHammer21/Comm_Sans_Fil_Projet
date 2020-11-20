@@ -4,6 +4,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
 
+
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -20,12 +21,20 @@ SOURCES += \
     widget.cpp
 
 HEADERS += \
+    ODALID.h \
     widget.h
 
 FORMS += \
     widget.ui
 
+LIBS += -L..\\Comm_Sans_Fil_Projet\\projetQt -lODALID
+
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    ODALID.dll \
+    libODALID.a
