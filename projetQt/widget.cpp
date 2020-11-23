@@ -43,7 +43,17 @@ void Widget::on_Connect_clicked()
      ui->Affichage->setText(version);
      ui->Affichage->update();
 
-     QString Text = ui->fenetre_saisie->toPlainText();
-     qDebug() << "Text : " << Text;
+
+}
+
+void Widget::on_pushButton_clicked()
+{
+    close();
+}
+
+void Widget::on_saisie_clicked()
+{
+    QString Text = ui->fenetre_saisie->toPlainText();
+    qDebug() << "Text : " << Text;
 
 }

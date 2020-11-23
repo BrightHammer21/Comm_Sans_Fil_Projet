@@ -18,6 +18,10 @@ public:
 private slots:
     void on_Connect_clicked();
 
+    void on_pushButton_clicked();
+
+    void on_saisie_clicked();
+
 private:
     Ui::Widget *ui;
 };
