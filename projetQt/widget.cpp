@@ -46,9 +46,15 @@ void Widget::on_Connect_clicked()
 
 }
 
+//BOUTON QUITTER
 void Widget::on_pushButton_clicked()
 {
-    close();
+     int16_t status = 0;
+     RF_Power_Control(&MonLecteur, FALSE, 0);
+     status = LEDBuzzer(&MonLecteur, LED_OFF);
+     status = CloseCOM(&MonLecteur);
+     qApp->quit();
+
 }
 
 void Widget::on_saisie_clicked()
