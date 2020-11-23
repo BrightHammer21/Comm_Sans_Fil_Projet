@@ -27,7 +27,7 @@ HEADERS += \
 FORMS += \
     widget.ui
 
-LIBS += -L -lODALID
+#LIBS += -L -lODALID
 
 
 # Default rules for deployment.
@@ -38,3 +38,13 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     ODALID.dll \
     libODALID.a
+
+win32: LIBS += -L$$PWD/./ -lODALID
+
+INCLUDEPATH += $$PWD/.
+DEPENDPATH += $$PWD/.
+
+win32: LIBS += -L$$PWD/./ -lODALID
+
+INCLUDEPATH += $$PWD/.
+DEPENDPATH += $$PWD/.
